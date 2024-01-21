@@ -30,3 +30,6 @@ issues: https://github.com/camillo/ansible-iredmail/issues
 
 build_ignore:
   - .gitignore
+  - .devcontainer
+  
+  
