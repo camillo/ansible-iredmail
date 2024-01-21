@@ -1,0 +1,6 @@
+ansible
+ansible-lint
+jmespath
+netaddr
+proxmoxer
+PyMySQL

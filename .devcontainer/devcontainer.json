@@ -1,0 +1,62 @@
+{
+	"name": "littledev",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"runArgs": [
+				"--privileged"
+			]		
+		},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "ssh-agent",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+			"username": "vscode"
+		}
+	},
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh",
+		"type=bind,source=${localEnv:HOME}/.gnupg,target=/home/vscode/.gnupg"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"redhat.ansible",
+				"redhat.vscode-yaml",
+				"ms-python.autopep8"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"ansible.python.interpreterPath": ".venv/bin/python",
+				"ansible.validation.lint.path": ".venv/bin/ansible-lint",
+				"files.associations": {
+					"*.yaml": "ansible"
+				},
+				"files.exclude": {
+					"**/.git": true,
+					"**/.svn": true,
+					"**/.hg": true,
+					"**/CVS": true,
+					"**/.DS_Store": true,
+					"**/Thumbs.db": true,
+					"**/.venv": true,
+					"**/.docker": true
+				},
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.autopep8"
+				  }
+			}
+		}
+	},
+	"remoteEnv": {
+		"SUMMON_PROVIDER": "gopass"
+	},
+	"containerEnv": {
+		"EDITOR": "vim"
+	},
+	"onCreateCommand": ".devcontainer/onCreateCommand.sh",
+	"remoteUser": "vscode"
+}

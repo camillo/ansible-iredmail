@@ -1,0 +1,32 @@
+namespace: camillo
+name: iredmail
+description: Tools to install and manage iredmail
+version: 1.0.1
+authors:
+  - Daniel Marohn <camillo@littleroot.de>
+readme: README.md
+
+# L(SPDX,https://spdx.org/licenses/)
+license:
+  - 0BSD
+  - GPL-2.0-or-later
+# license_file: COPYING
+
+tags:
+  - mail
+  - iredmail
+  - database
+  - alias
+  - forwarding
+
+dependencies: {
+  "community.mysql": ">=3.8.0",
+}
+
+repository: https://github.com/camillo/ansible-iredmail
+documentation: https://github.com/camillo/ansible-iredmail
+homepage: https://github.com/camillo/ansible-iredmail
+issues: https://github.com/camillo/ansible-iredmail/issues
+
+build_ignore:
+  - .gitignore

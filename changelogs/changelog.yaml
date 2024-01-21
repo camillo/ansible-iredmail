@@ -1,0 +1,24 @@
+---
+releases:
+  1.0.0:
+    release_date: "2024-01-21"
+    codename: "little-mermaid"
+    changes:
+      release_summary: "Initial release"
+      major_changes:
+        - "Added address module for managing alias and forwardings"
+    modules:
+      - name: "address"
+        description: "Manage alias and forwardings"
+        namespace: "camillo.iredmail"
+  1.0.1:
+    release_date: "2024-01-21"
+    codename: "little-mermaid"
+    changes:
+      release_summary: "release preps"
+      major_changes:
+        - "signing"
+    modules:
+      - name: "address"
+        description: "Manage alias and forwardings"
+        namespace: "camillo.iredmail"
