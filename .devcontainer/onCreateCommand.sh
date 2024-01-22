@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 git config --global init.defaultBranch main
 echo "Set git default branch to main"
