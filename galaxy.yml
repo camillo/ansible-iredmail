@@ -28,13 +28,9 @@ documentation: https://github.com/camillo/ansible-iredmail
 homepage: https://github.com/camillo/ansible-iredmail
 issues: https://github.com/camillo/ansible-iredmail/issues
 
-build_ignore:
-  - .gitignore
-  - .devcontainer/
-  - .devcontainer/onCreateCommand.sh
-  - .github/
-
 manifest:
   directives:
     - recursive-exclude .devcontainer **
     - global-exclude *.tar.gz
+    - exclude .github/
+    - global-exclude .gitignore
