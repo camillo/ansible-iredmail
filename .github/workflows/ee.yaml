@@ -45,7 +45,7 @@ jobs:
           - name: ansible-core 2.16 @ Rocky Linux 9
             ansible_core: https://github.com/ansible/ansible/archive/stable-2.16.tar.gz
             ansible_runner: ansible-runner
-            base_image: quay.io/rockylinux/rockylinux:9
+            base_image: ubuntu-latest
             pre_base: '"#"'
     runs-on: ubuntu-latest
     steps:
