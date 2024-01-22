@@ -33,3 +33,8 @@ build_ignore:
   - .devcontainer/
   - .devcontainer/onCreateCommand.sh
   - .github/
+
+manifest:
+  directives:
+    - recursive-exclude .devcontainer **
+    - global-exclude *.tar.gz
