@@ -60,7 +60,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install ansible-builder and ansible-navigator
-        run: pip install ansible-builder ansible-navigator distlib
+        run: pip install ansible-builder ansible-navigator
 
       - name: Verify requirements
         run: ansible-builder introspect --sanitize .
