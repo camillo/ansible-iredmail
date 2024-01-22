@@ -42,8 +42,8 @@ jobs:
         exclude:
           - ansible_core: ''
         include:
-          - name: ansible-core 2.16 @ Rocky Linux 9
-            ansible_core: https://github.com/ansible/ansible/archive/stable-2.16.tar.gz
+          - name: ansible-core 2.15 @ Rocky Linux 9
+            ansible_core: https://github.com/ansible/ansible/archive/stable-2.15.tar.gz
             ansible_runner: ansible-runner
             base_image: quay.io/rockylinux/rockylinux:9
             pre_base: '"#"'
