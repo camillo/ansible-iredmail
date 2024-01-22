@@ -164,6 +164,8 @@ __metaclass__ = type
 
 
 def email(value):
+    if value is None:
+        return None
     match = re.match(
         r"\b([A-Z0-9._%+-]+)@([A-Z0-9.-]+\.[A-Z]{2,})\b", value, re.IGNORECASE | re.VERBOSE)
     if match is None:
