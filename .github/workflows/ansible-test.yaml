@@ -113,7 +113,7 @@ jobs:
           # 2.16
           - ansible: '2.16'
             docker: fedora35
-            python: ''
+            python: '3.11'
 
     steps:
       - name: Perform integration testing against Ansible version ${{ matrix.ansible }} under Python ${{ matrix.python }}
