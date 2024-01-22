@@ -45,7 +45,7 @@ jobs:
           - name: ansible-core 2.16 @ Rocky Linux 9
             ansible_core: https://github.com/ansible/ansible/archive/stable-2.16.tar.gz
             ansible_runner: ansible-runner
-            base_image: python:3.11.7-bullseye
+            base_image: quay.io/rockylinux/rockylinux:9
             pre_base: '"#"'
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +57,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.11.2'
 
       - name: Install ansible-builder and ansible-navigator
         run: pip install ansible-builder ansible-navigator
